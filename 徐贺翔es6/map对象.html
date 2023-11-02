@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // const map =new Map([
+    //     ['ggg','哈哈哈'],
+    //     ['hhh','哈哈哈'],
+    //     ['hhhf','哈哈哈'],
+    //     ['hhh1','哈哈哈'],
+    // ])
+    // console.log(map.size);
+    // map.set('hh','111')
+    // console.log(map);
+    // console.log(map.get('hh'));
+    // console.log(map.has('kkk'));
+    // console.log(map.delete('hh'));
+    // console.log(map);
+
+    // set
+    // const arr=[1,2,3,4,55,5,55]
+    // const a=Array.from(new Set([1,2,3,4,55,5,55]))
+    // console.log(a);
+    // function Pin(x, y) {
+    //   (this.x = x), (this.y = y);
+    // }
+    // Pin.prototype.toString = function () {
+    //   return "(" + this.x + this.y + ")";
+    // };
+    // var p = new Pin(1, 2);
+    // console.log(p);
+    class Pin {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+      toString() {
+        return this.x + this.y;
+      }
+    }
+    var p = new Pin(1, 2);
+    console.log(p);
+  </script>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style type="text/css">
+		body{
+			padding: 100px;
+		}
+		/*两个圆*/
+		.love{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+			float: left;
+			border-radius: 50%;
+			animation: animate 1s infinite;
+		}
+		.love-left{
+			position: relative;
+			left: 50px;
+		}
+		/*做一个正方体与两个圆组合成心形*/
+		.sq{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+			transform: rotate(45deg);
+			animation: animate 1s infinite;
+			position: relative;
+			top: 50px;
+			left: 100px;
+		}
+		/*定义动画*/
+		@keyframes animate{
+			0%{
+				transform: scale(0.8) rotate(45deg);
+				box-shadow: 0 0 100px red;		/*阴影*/
+			}
+			50%{
+				transform: scale(1) rotate(45deg);
+				box-shadow: 0 0 100px red;		/*阴影*/
+			}
+			100%{
+				transform: scale(0.8) rotate(45deg);
+				box-shadow: 0 0 100px red;		/*阴影*/
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="love love-left"></div>
+		<div class="love "></div>
+		<div class="sq"></div>
+	</div>
+   <div class="tu">
+    <img src="./1eaf0678c3edb73ec1ec528e1c1ace1.jpg" alt="">
+    <img src="./3c1a120d387612b799b1fab3dfca02e.jpg" alt="">
+   </div>
+	
+</body>
+<style>
+    img{
+        width: 230px;
+    }
+</style>
+</html>

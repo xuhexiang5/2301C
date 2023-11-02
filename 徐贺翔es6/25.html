@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function fn(a,c=10,b){
+            return a+c+b
+        }
+        let a=fn(1,2)
+        console.log(a);
+
+        function fn1(a,b){
+            console.log(a,b,arguments);
+        }
+        fn1(1,2,3,4,5)
+
+        function fn2(a,b,...arguments){
+            console.log(a,b,arguments);
+        }
+        fn2(1,2,3,4,5)
+    </script>
+</body>
+</html>

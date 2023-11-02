@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1 ie"></div>
+        <div class="box2 ie"></div>
+        <div class="box3 ie"></div>
+    </div>
+</body>
+<script>
+    let aa = document.getElementsByClassName('ie')
+    for (let i = 0; i < aa.length; i++) {
+        aa[i].addEventListener('click', function () {
+            
+            if(aa[i].style.background == 'pink'){
+                aa[i].style.background=''
+            }else{
+                aa[i].style.background = 'pink'
+            }
+        })
+        // aa[i].onclick = function() {
+        //     aa[i].style.background = 'pink'
+        // }
+    }
+</script>
+<style>
+    .box {
+        height: 80px;
+        display: flex;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        margin-left: 10px;
+        width: 80px;
+        height: 3dvh;
+        border: 1px solid black;
+    }
+</style>
+
+</html>

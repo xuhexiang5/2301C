@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="top">
+      <h2 style="text-align: center; color: #fff">H2301C点名表</h2>
+      <p class="time" style="color: #fff"></p>
+    </div>
+    <div class="list">
+      <div class="z"></div>
+      <div class="y">
+        <div class="xuan">
+          <h2 style="color: #fff">天选之人：</h2>
+          <h2 class="tt"></h2>
+        </div>
+        <div class="flo">
+          <button onclick="dan()" class="dname">单人点名</button>
+          <button onclick="dbren()" class="sname">双人点名</button>
+          <button onclick="mannane()" class="nanname">男生点名</button>
+          <button onclick="nvname()" class="nvsex">女生点名</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let arr = [
+      "杨晓宇",
+      "陈亚东",
+      "赵中阳",
+      "展立业",
+      "曹昊然",
+      "李媛媛",
+      "王婷婷",
+      "孙建",
+      "杨子乐",
+      "冯士靖",
+      "张秋景",
+      "李炎沛",
+      "裴丽珂",
+      "付少聪",
+      "曹博文",
+      "李超凡",
+      "王凯",
+      "丁卓肖",
+      "余道林",
+      "王志阳",
+      "张清莲",
+      "刘博文",
+      "周天龙",
+      "杨浩淇",
+      "韩锡金",
+    ];
+    let arr1 = ["李媛媛", "王婷婷", "张秋景", "裴丽珂", "冯兴微", "张梦佳"];
+    let arr2 = [
+      "杨晓宇",
+      "陈亚东",
+      "赵中阳",
+      "展立业",
+      "曹昊然",
+      "孙建",
+      "杨子乐",
+      "冯士靖",
+      "付少聪",
+      "曹博文",
+      "李超凡",
+      "王凯",
+      "丁卓肖",
+      "余道林",
+      "王志阳",
+      "刘博文",
+      "周天龙",
+      "杨浩淇",
+      "韩锡金",
+    ];
+    let tt = document.querySelector(".tt");
+    let dname = document.querySelector(".dname");
+    let sname = document.querySelector(".sname");
+    let nanname=document.querySelector('.nanname')
+    let nvsex=document.querySelector('.nvsex')
+    var aa = null;
+
+    // 女生点名
+    function nvname() {
+      if (nvsex.innerHTML == "女生点名") {
+        nvsex.innerHTML = "停止";
+        aa = setInterval(nv, 100);
+        return;
+      }
+      if (nvsex.innerHTML == "停止") {
+        nvsex.innerHTML = "女生点名";
+        clearInterval(aa);
+        return;
+      }
+    }
+    // 男生
+    function mannane() {
+      
+      if (nanname.innerHTML == "男生点名") {
+        nanname.innerHTML = "停止";
+        aa = setInterval(nan, 100);
+        return;
+      }
+      if (nanname.innerHTML == "停止") {
+        nanname.innerHTML = "男生点名";
+        clearInterval(aa);
+        return;
+      }
+    }
+    // 双人
+    function dbren() {
+      if (sname.innerHTML == "双人点名") {
+        sname.innerHTML = "停止";
+        aa = setInterval(mys, 100);
+        return;
+      }
+      if (sname.innerHTML == "停止") {
+        sname.innerHTML = "双人点名";
+        clearInterval(aa);
+        return;
+      }
+    }
+    // 单人
+    function dan() {
+      if (dname.innerHTML == "单人点名") {
+        dname.innerHTML = "停止";
+        aa = setInterval(my, 100);
+        return;
+      }
+      if (dname.innerHTML == "停止") {
+        dname.innerHTML = "单人点名";
+        clearInterval(aa);
+        return;
+      }
+    }
+    //  随机双人
+    function mys() {
+      a = arr[Math.floor(Math.random() * arr.length)];
+      b = arr[Math.floor(Math.random() * arr.length)];
+      if (a === b) return;
+      tt.innerHTML = a + "," + b;
+      console.log(a, b);
+    }
+    // 随机单人
+    function my() {
+      a = arr[Math.floor(Math.random() * arr.length)];
+      tt.innerHTML = a;
+    }
+    // 男点名
+    function nan() {
+      a = arr2[Math.floor(Math.random() * arr2.length)];
+      tt.innerHTML = a;
+    }
+    // 女生点名
+    function nv() {
+      a = arr1[Math.floor(Math.random() * arr1.length)];
+      tt.innerHTML = a;
+    }
+
+    // 同学
+    let list = document.querySelector(".z");
+    for (let i = 0; i < arr.length; i++) {
+      list.innerHTML += `<span class='tt'>${arr[i]}</span>`;
+    }
+    // 时间
+    function dren() {
+      let time = document.querySelector(".time");
+      time.innerHTML = "时间" + ":" + new Date().toLocaleString();
+    }
+    setInterval(dren, 1000);
+  </script>
+
+  <style>
+    .top {
+      height: 200px;
+    }
+    body {
+      background-color: blanchedalmond;
+      background-image: url(./infinity-1315601.jpg);
+    }
+    .time {
+      position: fixed;
+      right: 5%;
+      top: 20%;
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .z {
+      width: 50%;
+    }
+    .tt {
+      display: inline-block;
+      width: 18%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-image: linear-gradient(90deg, #ff0000 0, #2575fc);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .xuan {
+      display: flex;
+      align-items: center;
+    }
+    .y {
+      width: 50%;
+    }
+    .flo button {
+      width: 100px;
+      height: 60px;
+      border: 0;
+      background-color: greenyellow;
+      color: red;
+      border-radius: 50%;
+    }
+    .flo {
+      margin-top: 10%;
+    }
+  </style>
+</html>

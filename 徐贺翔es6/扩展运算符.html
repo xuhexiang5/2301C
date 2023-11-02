@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // const a=[1,2,3,4]
+        // const a1=['女警','哈哈','老累']
+        // const c=a.concat(a1)
+        // console.log(c);
+
+        // const c2=[...a,...a1]
+        // console.log(c2);
+
+        // for(let i = 0;i <a.length ;i++) {
+        //         a1.push(a[i])
+
+
+        // }
+        // console.log(a1);
+
+        // 遍历器
+        // const xiyou=['娃娃','改改','来了']
+        // let iterator=xiyou[Symbol.iterator]()
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // 生成器
+        // function * fn(){
+        //     yield '哈哈哈哈哈'
+        //     yield '孤寡孤寡孤寡'
+        //     yield '搜灌灌灌灌'
+        // }
+        // let iterator= fn()
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        //promise函数
+        // const p = new Promise((resolve, reject) => {
+        //     setInterval(() => {
+        //         let r = '我是失败的返回'
+        //         reject(r)
+        //     })
+        // })
+        // p.then((r) => {
+        //     console.log(r,'r');
+        // }).catch((r)=>{
+        //     console.log(r);
+        // })
+        const pp =new Promise((resolve,reject)=>{
+             setInterval(()=>{
+                let r='我是成功的'
+                resolve(r)
+             })
+        })
+        pp.then(r=>{
+            console.log(r);
+        }).catch((r) => {
+            console.log(r);
+        })
+    </script>
+</body>
+
+</html>

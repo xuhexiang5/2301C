@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <h2 style="text-align: center;color: #fff;">H2301C点名表</h2>
+        <p class="time" style="color: #fff;">时间</p>
+    </div>
+    <div class="list">
+        <div class="z">
+
+        </div>
+        <div class="y">
+            <div class="top">
+                <h2>天选之人：</h2>
+                <h2 class="ttt"></h2>
+            </div>
+            <div class="y-list">
+                <button onclick="dren()" class="dan">单人点名</button>
+                <button>双人点名</button>
+                <button>男生点名</button>
+                <button>女生点名</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let dan = document.querySelector('.dan')
+    let ttt = document.querySelector('.ttt')
+    const arr = ["1", "2", "3", "徐贺翔", "5", "6", "7", "8",
+        "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26",
+        "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"
+    ]
+
+
+
+    var aa = null
+    function dren() {
+        
+        if (dan.innerHTML == '单人点名') {
+            dan.innerHTML = '停止'
+            aa = setInterval(sui, 100)
+            return
+        }
+        if (dan.innerHTML == '停止') {
+            clearInterval(aa)
+            dan.innerHTML = '单人点名'
+            return
+        }
+
+    }
+
+    //   随机人
+    function sui() {
+        a = arr[Math.floor(Math.random() * arr.length)]
+        ttt.innerHTML = a
+        console.log();
+        // ttt.innerHTML.style.backgroundImage='linear-gradient(90deg,#ff0000 0,#2575fc);'
+    }
+
+
+
+    // 同学
+    for (let i = 0; i < arr.length; i++) {
+        const div = document.querySelector('.z')
+        div.innerHTML += `<span class='span'>${arr[i]}</span>`
+    }
+    // 时间
+    function tt() {
+        const time = document.querySelector('.time')
+        time.innerHTML = '时间' + ':' + new Date().toLocaleString().replaceAll('/', '-')
+    }
+    setInterval(() => {
+        tt()
+    })
+</script>
+
+<style>
+    .box {
+        height: 200px;
+    }
+
+    body {
+        background-image: url(./infinity-1315601.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .time {
+        position: fixed;
+        right: 5%;
+        top: 20%;
+    }
+
+    .list {
+        display: flex;
+    }
+
+    .z {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .y {
+        width: 50%;
+    }
+
+    .span {
+        text-align: center;
+        line-height: 40px;
+        display: inline-block;
+        height: 40px;
+        font-weight: 900;
+        width: 25%;
+      font-size: 20px;
+      background-image: linear-gradient(90deg,#ff0000 0,#2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+
+    .y-list {
+        margin-top: 20%;
+    }
+
+    .y-list button {
+        width: 100px;
+        height: 40px;
+        border: 0;
+        border-radius: 50%;
+        background-color: greenyellow;
+        color: #ef0808;
+    }
+
+    .top {
+        display: flex;
+        color: #fff;
+    }
+</style>
+
+</html>
