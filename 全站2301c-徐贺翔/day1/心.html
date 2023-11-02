@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Red Heart</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <canvas id="heartCanvas" width="200" height="200"></canvas> -->
+
+    <script>
+       // 创建一个 canvas 元素
+const canvas = document.createElement('canvas');
+canvas.width = 1000;
+canvas.height = 1000;
+document.body.appendChild(canvas);
+
+// 获取画布的上下文
+const ctx = canvas.getContext('2d');
+
+// 设置画笔的颜色和样式
+ctx.fillStyle = "red";
+ctx.strokeStyle = "red";
+ctx.lineWidth = 2;
+
+// 绘制桃心形状
+ctx.beginPath();
+ctx.moveTo(75, 40);
+ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+ctx.fill();
+ctx.stroke();
+    </script>
+</body>
+
+</html>
