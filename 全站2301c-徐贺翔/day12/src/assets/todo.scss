@@ -1,0 +1,182 @@
+.li {
+  background-color: #ed7b52 ;
+  animation: name 1s linear;
+  // height: 40px;
+  // background-color: #ed7b52;
+  // .z{
+  //   display: flex;
+  //   align-items: center;
+  //   input{
+  //     width: 30px;
+  //     height: 20px;
+  //   }
+  //   p{
+  //     text-decoration: line-through;
+  //     margin-left: 10px;
+  //   }
+  // }
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  @keyframes name {
+    0%{
+      background-color: #fff;
+    }
+    100% {
+      background-color: #ed7b52;
+  
+    }
+  }
+}
+.ul{
+  animation: hh 1s linear;
+  @keyframes hh {
+    0%{
+      background-color: #ed7b52;
+    }
+    100% {
+      background-color: #fff;
+  
+    }
+  }
+}
+
+
+.lii {
+  margin-bottom: 20px 0;
+  height: 40px;
+  .z {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 30px;
+      height: 20px;
+    }
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gong {
+  display: flex;
+
+  .red {
+    background-color: #ed7b52;
+    color: #fff;
+  }
+
+  p {
+    width: 80px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+  }
+
+  .pp:hover {
+    background-color: #ed7b52;
+    color: #fff;
+  }
+}
+
+.list {
+  margin-top: 30px;
+
+  .tou {
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    input {
+      border: 0;
+      border-bottom: 2px dashed #ed7b52;
+      outline: none;
+      width: 75%;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 70px;
+      background-color: #fff;
+      height: 25px;
+      border: 1px solid black;
+      transform: rotateZ(4deg);
+      margin-left: 5px;
+    }
+
+    button:hover {
+      background-color: #ed7b52;
+      color: #fff;
+      width: 90px;
+      height: 40px;
+      font-size: 25px;
+    }
+  }
+}
+
+h2 {
+  margin: 20px 0 0 97px;
+}
+
+.box {
+  overflow: hidden;
+  width: 100%;
+  height: 98vh;
+  background: linear-gradient(95deg, pink, #f5c1aa);
+}
+
+.box-list {
+  width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 20%;
+  }
+
+  .pi {
+    color: #fff;
+    background-color: #ed7b52;
+    width: 100px;
+    text-align: center;
+    border-radius: 0 5px 15px 5px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+    transform: rotateZ(4deg)
+  }
+}
+
+// .cccc {
+//   width: 200px;
+//   height: 200px;
+//   background-color: red;
+// }
+// .cccc:hover{
+//   animation: name  5s;
+
+// }
+// @keyframes name {
+//   from {
+//     background-color: red;
+//   }
+
+//   to {
+//     background-color: yellow;
+//   }
+// }
